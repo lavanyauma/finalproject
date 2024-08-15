@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service</title>
+    <link rel="stylesheet" href="finalproject.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Tiffin Service Logo" class="logo">
+        <h1>Welcome to Tiffin Service</h1>
+        <nav>
+            <a href="#" onclick="showLogin()">Login</a>
+            <a href="#" onclick="showSignup()">Sign Up</a>
+            <a href="#" onclick="showMenu()">Menu</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="authForms">
+            <form id="loginForm" class="auth-form" style="display: none;">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signupName" placeholder="Full Name" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="menuSection" style="display: none;">
+            <h2>Today's Menu</h2>
+            <div class="dish">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/07/moong-dal-dosa-recipe.jpg" alt="Dosa">
+                <h3>Dosa</h3>
+                <p>Price: $10</p>
+                <button onclick="addToCart('Dosa', 10)">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="https://www.rotinrice.com/wp-content/uploads/2011/04/RotiCanai-1-500x500.jpg" alt="Roti">
+                <h3>Roti</h3>
+                <p>Price: $12</p>
+                <button onclick="addToCart('Roti', 12)">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/poori-puri-recipe.jpg" alt="puri">
+                <h3>Puri</h3>
+                <p>Price: $12</p>
+                <button onclick="addToCart('puri', 12)">Add to Cart</button>
+            </div>
+            <div class="dish">
+                <img src="https://c.ndtvimg.com/2023-09/u113o4r_medu-vada_625x300_06_September_23.jpg" alt="Vada">
+                <h3>Vada</h3>
+                <p>Price: $12</p>
+                <button onclick="addToCart('Vada', 12)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div id="reviewSection" style="display: none;">
+            <h2>Rate Your Meal</h2>
+            <div class="rating">
+                <span onclick="rate(1)">★</span>
+                <span onclick="rate(2)">★</span>
+                <span onclick="rate(3)">★</span>
+                <span onclick="rate(4)">★</span>
+                <span onclick="rate(5)">★</span>
+            </div>
+            <textarea id="reviewText" placeholder="Leave your feedback here..."></textarea>
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+    </main>
+
+    <script src="finalproject.js"></script>
+</body>
+</html>
